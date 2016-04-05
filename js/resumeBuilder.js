@@ -1,4 +1,4 @@
-var bio = {
+var bio: {
   "name": "jennifer lyden",
   "role": "developer",
   "contacts": {
@@ -12,36 +12,7 @@ var bio = {
   "bioPic": "https://i.stack.imgur.com/hB170.jpg?s=328&g=1"
 };
 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-var formattedMobile = HTMLmobile.replace("%data%", bio.mobile);
-var formattedEmail = HTMLemail.replace("%data%", bio.email);
-var formattedGithub = HTMLgithub.replace("%data%", bio.github);
-var formattedLocation = HTMLlocation.replace("%data%", bio.location);
-var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
-var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
-var formattedSkills = HTMLskills.replace("%data%", bio.skills);
-
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-$("#header").prepend(formattedBioPic);
-$("#header").append(formattedEmail);
-$("#header").append(formattedMobile);
-$("#header").append(formattedGithub);
-$("#header").append(formattedLocation);
-$("#header").append(formattedWelcomeMsg);
-$("#header").append(HTMLskillsStart);
-$("#header").append(formattedSkills);
-
-
-var work = {};
-work.Employer = "Bergen Community College";
-work.Location = "Paramus, NJ";
-work.Title = "Assistant Professor";
-work.Dates = "2007 - present";
-work.Description = "I taught stuff.";
-
-var education = {
+var education: {
   "schools": [
     {
       "name": "University of Notre Dame",
@@ -98,5 +69,55 @@ var education = {
   ]
 };
 
-$("#main").append(work["Title"]);
-$("#main").append(education.Name);
+var projects: {
+  "projects": [
+    {
+      "title": "",
+      "dates": "",
+      "description": "",
+      "images": [
+        "", ""
+      ]
+    }
+  ]
+}
+
+var work: {
+  "jobs": [
+    {
+      "employer": "Udacity",
+      "location": "remote",
+      "title": "Code Reviewer",
+      "dates": "2016 - present",
+      "description": "Review code for FSND Project 4 - 'Design a Game'."
+    },
+    {
+      "employer": "Bergen Community College",
+      "location": "Paramus, NJ",
+      "title": "Assistant Professor",
+      "dates": "2007 - present",
+      "description": ["Teach 5-6 philosophy or religion courses per semester.", "Built, updated, and taught 4 online or hybrid courses, including HTML & CSS files.", "Instruct colleagues in online teaching."]
+    },
+    {
+      "employer": "Renew International",
+      "location": "Plainfield, NJ",
+      "title": "Web Designer & Writer",
+      "dates": "2004 - 2007",
+      "description": ["Created design and content for original CampusRenew webpage", "Wrote content for CampusRenew publications."]
+    },
+    {
+      "employer": "Our Lady of the Mount Catholic Church",
+      "location": "Warren, NJ",
+      "title": "Director of Music",
+      "dates": "2004-2006",
+      "description": ["Planned, prepared and coordinated music for 5 weekly liturgies, plus weddings and funerals", "Directed adult, child and handbell choirs; created intergenerational “folk” choir"]
+    },
+    {
+      "employer": "Marist High School",
+      "location": "Bayone, NJ",
+      "title": "Educator",
+      "dates": "2003 - 2004",
+      "description": "Taught Morality and Introduction to Christianity courses."
+    }
+  ]
+};
