@@ -172,7 +172,7 @@ if (bio.skills.length > 0 ) {
   }
 }
 
-function displayWork(){
+function displayWork() {
   for (job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
     if (work.jobs.hasOwnProperty(job)){
@@ -190,3 +190,14 @@ function displayWork(){
 }
 
 displayWork();
+
+function locationizer(work_obj) {
+    var locations = [];
+    for (job in work_obj.jobs) {
+        if (work_obj.jobs.hasOwnProperty(job)){
+            var thisLoc = work_obj.jobs[job].location;
+            locations.push(thisLoc);
+        }
+    }
+    return locations;
+}
