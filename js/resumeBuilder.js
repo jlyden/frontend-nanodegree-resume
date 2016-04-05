@@ -2,15 +2,18 @@ var bio = {
   "name": "jennifer lyden",
   "role": "developer",
   "contacts": {
-    "mobile": "(908)868-3185",
+    "mobile": "(908) 868-3185",
     "email": "jlyden1@alumni.nd.edu",
     "github": "https://github.com/jlyden",
     "location": "Bronx, NY"
   },
   "welcomeMsg": "I want to work for you!",
-  "skills": ["programming - Python, HTML5, CSS, SQL", "teaching - philosophy, music, tech", "music - piano, guitar, percussion, voice"],
+  "skills": ["programming", "teaching", "music"],
   "bioPic": "https://i.stack.imgur.com/hB170.jpg?s=328&g=1"
 };
+
+// "skills": ["programming - Python, HTML5, CSS, SQL", "teaching - philosophy, music, tech", "music - piano, guitar, percussion, voice"],
+
 
 var education = {
   "schools": [
@@ -141,3 +144,34 @@ var work = {
     }
   ]
 };
+
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
+var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMsg);
+
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
+$("#header").prepend(formattedBioPic);
+$("#header").append(formattedEmail);
+$("#header").append(formattedMobile);
+$("#header").append(formattedGithub);
+$("#header").append(formattedLocation);
+$("#header").append(formattedWelcomeMsg);
+
+if (bio.skills.length > 0 ) {
+  $("#header").append(HTMLskillsStart);
+  var formattedSkill = ""
+  for (var i=0; i < bio.skills.length; i++) {
+    formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
+    $("#skills").append(formattedSkill);
+  }
+}
+
+for (var i = 0; i < 9; i++){
+  console.log(i);
+}
