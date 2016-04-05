@@ -72,15 +72,35 @@ var education: {
 var projects: {
   "projects": [
     {
-      "title": "",
-      "dates": "",
-      "description": "",
-      "images": [
-        "", ""
-      ]
+      "title": "Straight Gin",
+      "dates": "March 2016",
+      "description": "Back-end for Straight Gin card game, designed for Google AppEngine deployment",
+      "github": "https://github.com/jlyden/straight-gin",
+      "images": []
+    },
+    {
+      "title": "Gifter",
+      "dates": "Jan - March 2016",
+      "description": "Database-supported web app maintaining lists & associations of givers, recipients and gifts",
+      "github": "https://github.com/jlyden/catalog",
+      "images": []
+    },
+    {
+      "title": "Book Connect",
+      "dates": "Dec 2015",
+      "description": "Social media web app to connect book buyers and sellers",
+      "github": "https://github.com/jlyden/bookconnect",
+      "images": []
+    },
+    {
+      "title": "Tournament",
+      "dates": "Nov 2015",
+      "description": "Python app for running a Swiss-Pairings tournament with database support",
+      "github": "https://github.com/jlyden/tournament",
+      "images": []
     }
   ]
-}
+};
 
 var work: {
   "jobs": [
