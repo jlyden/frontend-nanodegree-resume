@@ -119,14 +119,14 @@ var work = {
       "location": "Paramus, NJ",
       "title": "Assistant Professor",
       "dates": "2007 - present",
-      "description": ["Teach 5-6 philosophy or religion courses per semester.", "Built, updated, and taught 4 online or hybrid courses, including HTML & CSS files.", "Instruct colleagues in online teaching."]
+      "description": ["Teach 5-6 philosophy or religion courses per semester", "Built, updated, and taught 4 online or hybrid courses, including HTML & CSS files", "Instruct colleagues in online teaching"]
     },
     {
       "employer": "Renew International",
       "location": "Plainfield, NJ",
       "title": "Web Designer & Writer",
       "dates": "2004 - 2007",
-      "description": ["Created design and content for original CampusRenew webpage", "Wrote content for CampusRenew publications."]
+      "description": ["Created design and content for original CampusRenew webpage", "Wrote content for CampusRenew publications"]
     },
     {
       "employer": "Our Lady of the Mount Catholic Church",
@@ -177,7 +177,12 @@ for (job in work.jobs) {
   if (work.jobs.hasOwnProperty(job)){
     var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
     var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-    var formattedEmployerTitle = formattedEmployer + formattedTitle
-    $(".work-entry:last").append(formattedEmployerTitle);
+    var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+    var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+    var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+    $(".work-entry:last").append(formattedEmployer + formattedTitle);
+    $(".work-entry:last").append(formattedDates);
+    $(".work-entry:last").append(formattedLocation);
+    $(".work-entry:last").append(formattedDescription);
   }
 }
