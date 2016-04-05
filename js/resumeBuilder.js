@@ -32,3 +32,71 @@ $("#header").append(formattedLocation);
 $("#header").append(formattedWelcomeMsg);
 $("#header").append(HTMLskillsStart);
 $("#header").append(formattedSkills);
+
+
+var work = {};
+work.Employer = "Bergen Community College";
+work.Location = "Paramus, NJ";
+work.Title = "Assistant Professor";
+work.Dates = "2007 - present";
+work.Description = "I taught stuff.";
+
+var education = {
+  "schools": [
+    {
+      "name": "University of Notre Dame",
+      "location": "South Bend, IN",
+      "degree": ["M.A.", "M.Div."],
+      "major": ["Philosophy", "Theology"],
+      "dates": ["1999", "2003"],
+      "url": "http://www.nd.edu"
+    },
+    {
+      "name": "University of Scranton",
+      "location": "Scranton, PA",
+      "degree": ["B.S"],
+      "major": ["Biophysics", "Philosophy"],
+      "minor": "Math",
+      "dates": "1997",
+      "url": "http://www.uofs.edu"
+    }
+  ],
+  "onlineCoursework": [
+    {
+      "program": "Full Stack NanoDegree",
+      "school": "Udacity",
+      "dates": "in progress",
+      "url": "https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004"
+    },
+    {
+      "course": "CS50 - Intro to Computer Science",
+      "school": "edX - HarvardX",
+      "dates": "Dec 2015",
+      "url": "https://www.edx.org/course/introduction-computer-science-harvardx-cs50x",
+      "certificate": "https://courses.edx.org/certificates/42725cfdc1d74c6e8900f0cff2e6499c"
+    },
+    {
+      "course": "6.00.1x - Intro to Comp Sci using Python",
+      "school": "edX - MITx",
+      "dates": "Mar 2016",
+      "url": "https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-6",
+      "certificate": "https://courses.edx.org/certificates/c9b1fdebb5824683a45385acee7bead4"
+    },
+    {
+      "course": "Intro to Linux",
+      "school": "edX - Linux Foundation",
+      "dates": "Jan 2016",
+      "url": "https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-0",
+      "certificate": "https://s3.amazonaws.com/verify.edx.org/downloads/f4780e815d1f44809de01a3a07e2ef9e/Certificate.pdf"
+    },
+    {
+      "course": "Essentials of Linux System Administration",
+      "school": "edX - Linux Foundation",
+      "dates": "in progress",
+      "url": "https://www.edx.org/course/linux-system-administration-essentials-linuxfoundationx-lfs201x"
+    }
+  ]
+};
+
+$("#main").append(work["Title"]);
+$("#main").append(education.Name);
