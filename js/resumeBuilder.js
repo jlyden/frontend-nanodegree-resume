@@ -1,4 +1,4 @@
-var bio: {
+var bio = {
   "name": "jennifer lyden",
   "role": "developer",
   "contacts": {
@@ -12,7 +12,7 @@ var bio: {
   "bioPic": "https://i.stack.imgur.com/hB170.jpg?s=328&g=1"
 };
 
-var education: {
+var education = {
   "schools": [
     {
       "name": "University of Notre Dame",
@@ -69,7 +69,7 @@ var education: {
   ]
 };
 
-var projects: {
+var projects = {
   "projects": [
     {
       "title": "Straight Gin",
@@ -102,7 +102,7 @@ var projects: {
   ]
 };
 
-var work: {
+var work = {
   "jobs": [
     {
       "employer": "Udacity",

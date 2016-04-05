@@ -73,3 +73,7 @@ $("#header").append(formattedSkills);
 
 $("#main").append(work["Title"]);
 $("#main").append(education.Name);
+
+// Added below to index.html to run test-code
+// Test code generated while working through lessons. Remove when course is over.
+// <script src="js/test-code.js"></script>
