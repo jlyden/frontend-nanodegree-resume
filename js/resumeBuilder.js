@@ -1,8 +1,21 @@
- $("#main").append(["jennifer lyden"]);
+var name = "jennifer lyden"
+var role = "developer"
 
-var awesomeThoughts = " I am jenny and I am AWESOME! "
-console.log(awesomeThoughts);
+var formattedName = HTMLheaderName.replace("%data%", name);
+var formattedRole = HTMLheaderRole.replace("%data%", role);
 
-var funThoughts = awesomeThoughts.replace("AWESOME", "FUN")
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
 
-$("#main").append(funThoughts)
+str1 = "audacity";
+str1 = "U" + str1.slice(2);
+console.log(str1);
+
+// $("#main").append(["jennifer lyden"]);
+
+// var awesomeThoughts = " I am jenny and I am AWESOME! "
+// console.log(awesomeThoughts);
+
+// var funThoughts = awesomeThoughts.replace("AWESOME", "FUN")
+
+// $("#main").append(funThoughts)
