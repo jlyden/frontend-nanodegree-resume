@@ -165,13 +165,19 @@ $("#header").append(formattedWelcomeMsg);
 
 if (bio.skills.length > 0 ) {
   $("#header").append(HTMLskillsStart);
-  var formattedSkill = ""
+  var formattedSkill = "";
   for (var i=0; i < bio.skills.length; i++) {
     formattedSkill = HTMLskills.replace("%data%", bio.skills[i]);
     $("#skills").append(formattedSkill);
   }
 }
 
-for (var i = 0; i < 9; i++){
-  console.log(i);
+for (job in work.jobs) {
+  $("#workExperience").append(HTMLworkStart);
+  if (work.jobs.hasOwnProperty(job)){
+    var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+    var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+    var formattedEmployerTitle = formattedEmployer + formattedTitle
+    $(".work-entry:last").append(formattedEmployerTitle);
+  }
 }
