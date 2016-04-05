@@ -48,6 +48,9 @@ function standardizeNameCapitalization2(_name) {
 }
 // console.log(standardizeNameCapitalization2(name));
 
+newHTML = newHTML.replace(/</g, '&lt').replace(/>/g, '&gt');
+
+
 // ----------------------------------
 // Other leftover code from resumeBuilder.js
 var formattedName = HTMLheaderName.replace("%data%", bio.name);
