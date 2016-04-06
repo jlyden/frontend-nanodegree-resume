@@ -112,7 +112,7 @@ var work = {
       "location": "remote",
       "title": "Code Reviewer",
       "dates": "2016 - present",
-      "description": "Review code for FSND Project 4 - 'Design a Game'."
+      "description": ["Review code for FSND Project 4 - 'Design a Game'."]
     },
     {
       "employer": "Bergen Community College",
@@ -140,7 +140,7 @@ var work = {
       "location": "Bayone, NJ",
       "title": "Educator",
       "dates": "2003 - 2004",
-      "description": "Taught Morality and Introduction to Christianity courses."
+      "description": ["Taught Morality and Introduction to Christianity courses."]
     }
   ]
 };
@@ -181,13 +181,47 @@ function displayWork() {
       var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
       var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
       var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-      var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
       $(".work-entry:last").append(formattedEmployer + formattedTitle);
       $(".work-entry:last").append(formattedDates);
       $(".work-entry:last").append(formattedLocation);
-      $(".work-entry:last").append(formattedDescription);
+
+      if (work.jobs[job].description.length > 0) {
+        $(".work-entry:last").append(HTMLworkDescStart)
+        for (desc in work.jobs[job].description) {
+          if (work.jobs[job].description.hasOwnProperty(desc)){
+            var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description[desc]);
+            $(".work-entry:last").append(formattedDescription);
+          }
+        }
+        $(".work-entry:last").append(HTMLworkDescEnd)
+      }
     }
   }
 }
 
 displayWork();
+
+projects.display = function() {
+  for (project in projects.projects) {
+    $("#projects").append(HTMLprojectStart);
+    if (projects.projects.hasOwnProperty(project)){
+      var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+      var formattedDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+      var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+      var formattedGithub = HTMLprojectGithub.replace(new RegExp("%data%", 'g'), projects.projects[project].github);
+      $(".project-entry:last").append(formattedTitle);
+      $(".project-entry:last").append(formattedDates);
+      $(".project-entry:last").append(formattedGithub);
+      $(".project-entry:last").append(formattedDescription);
+
+      if (projects.projects[project].images.length > 0) {
+        for (image in project.projects[project].images) {
+          var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
+          $(".project-entry:last").append(formattedImages);
+        }
+      }
+    }
+  }
+}
+
+projects.display();
