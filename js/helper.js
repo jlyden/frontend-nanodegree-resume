@@ -58,6 +58,19 @@ var googleMap = '<div id="map"></div>';
 /*
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
 */
+function inName() {
+  var nameArray = bio.name.split(' ');
+  // manipulate first name
+  nameArray[0] = nameArray[0].slice(0,1).toUpperCase() +
+                 nameArray[0].slice(1).toLowerCase();
+
+  // manipulate second name
+  nameArray[1] = nameArray[1].toUpperCase();
+  var finalName = nameArray.join(' ');
+
+  return finalName;
+}
+
 $(document).ready(function() {
   $('button').click(function() {
     var iName = inName() || function(){};
