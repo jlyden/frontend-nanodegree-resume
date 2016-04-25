@@ -1,3 +1,8 @@
+## Summary
+
+- Simple resume built in html, css and javascript.
+- Developed from basic starter code provided by Udacity.
+
 ## How do I complete this project?
 
 1. Go to the [Javascript Basics course](https://www.udacity.com/course/ud804) and select "View Course Materials."
